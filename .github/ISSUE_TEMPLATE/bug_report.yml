@@ -1,0 +1,32 @@
+name: Defect Report
+description: Report an issue in execution, dependencies, or Docker configuration.
+title: "[BUG]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please provide details regarding the defect encountered in the capstone service or documentation.
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Python version, Docker version, and operating system.
+      placeholder: "e.g., Python 3.10, Docker 26.0, Ubuntu 22.04"
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Service and Reproduction Steps
+      description: Which service (Django or Flask) encountered an error?
+      placeholder: "e.g., Running flask/pictureroutes.py with missing MONGO_URI env var"
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Error Traceback or Description
+      description: Include terminal output or traceback if available.
+    validations:
+      required: true
