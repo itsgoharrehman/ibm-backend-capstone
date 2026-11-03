@@ -1,0 +1,16 @@
+name: Conceptual Question
+description: Ask a conceptual question regarding backend architecture or microservices.
+title: "[QUESTION]: "
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Questions regarding microservice architecture, Django, Flask, or MongoDB integration. Direct graded assignment solutions will not be solved for currently enrolled students.
+  - type: textarea
+    id: inquiry
+    attributes:
+      label: Your Question
+      description: Describe the conceptual backend question.
+    validations:
+      required: true
